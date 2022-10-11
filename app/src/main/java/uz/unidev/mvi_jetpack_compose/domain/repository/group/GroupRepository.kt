@@ -15,4 +15,5 @@ interface GroupRepository {
     suspend fun deleteGroup(groupEntity: GroupEntity)
     fun getGroups(): Flow<List<GroupFullData>>
 
+    fun getGroupsSynchronous(): List<GroupEntity>
 }
