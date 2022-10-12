@@ -25,4 +25,8 @@ class GroupRepositoryImpl @Inject constructor(
     override fun getGroups(): Flow<List<GroupFullData>> {
         return groupDao.getGroupsWithInfo()
     }
+
+    override fun getGroupsSynchronous(): List<GroupEntity> {
+        TODO("Not yet implemented")
+    }
 }

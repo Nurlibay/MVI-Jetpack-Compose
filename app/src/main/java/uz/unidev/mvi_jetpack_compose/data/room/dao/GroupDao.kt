@@ -15,4 +15,7 @@ interface GroupDao : BaseDao<GroupEntity> {
     @Query("SELECT g.id, g.name, COUNT(s.id) as count FROM  GroupEntity g LEFT JOIN StudentEntity s ON g.id=s.groupId GROUP BY g.id")
     fun getGroupsWithInfo(): Flow<List<GroupFullData>>
 
+    @Query("SELECT * FROM GroupEntity")
+    fun getGroupsForTest(): List<GroupEntity>
+
 }
